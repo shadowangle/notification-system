@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="font-family: Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight: 700;text-transform: uppercase;border: none;background: #2c3e50;">
+
+  <a class="navbar-brand js-scroll-trigger" style="color:white">Hi {{currentUser.username}}!</a>
+
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" [routerLink]="['/home']" style="color:white">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" [routerLink]="['/contact']" style="color:white">Update contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" [routerLink]="['/activity']" style="color:white">Activity page</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link js-scroll-trigger" [routerLink]="['/login']" style="color:white">Logout</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+<div class="row align-items-center">
+  <div class="col">
+
+  </div>
+  <div class="col" style="padding-top: 30px;">
+    <h2>update your contact</h2>
+
+
+
+
+    <form name="form" (ngSubmit)="f.form.valid && updateContact(currentUser._id,model.mail)" #f="ngForm" novalidate>
+
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !mail.valid}">
+        <label for="mail" style="font-size:20px">new E-mail</label>
+        <input type="text" class="form-control" name="mail" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [(ngModel)]="model.mail"
+          #mail="ngModel" required />
+        <div *ngIf="f.submitted && !mail.valid  " class="help-block"> Email must be email format </div>
+
+
+      </div>
+
+      <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">Confirm</button>
+        <a [routerLink]="['/home']" class="btn btn-primary">Back</a>
+      </div>
+    </form>
+  </div>
+  <div class="col">
+
+  </div>
+</div>

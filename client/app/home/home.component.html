@@ -1,0 +1,92 @@
+﻿<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="font-family: Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight: 700;text-transform: uppercase;border: none;background: #2c3e50;">
+
+    <a class="navbar-brand js-scroll-trigger"   style="color:white">Hi {{currentUser.username}}!</a>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                 <a class="nav-link js-scroll-trigger" [routerLink]="['/home']" style="color:white">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" [routerLink]="['/contact']" style="color:white">Update contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" [routerLink]="['/activity']" style="color:white">Activity page</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" [routerLink]="['/login']" style="color:white">Logout</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+<div class="row align-items-center">
+    <div class="col">
+
+    </div>
+
+    <div class="col" style="padding-top: 30px;">
+        <!-- <a (click)="Fever()" class="btn btn-danger">Fever</a>
+        <a (click)="Bleeding()" class="btn btn-danger">Bleeding</a>
+         <a (click)="Lackofwater()" class="btn btn-danger">Lackofwater</a>
+        <a (click)="Heartdisease()" class="btn btn-danger">Heartdisease</a>
+        <a (click)="Normal()" class="btn btn-danger">Normal</a>   -->
+        <div style="text-align: center;">
+            <img class="img-fluid" src="../../img/profile.png" alt="">
+        </div>
+        <div style="text-align: center;padding-top : 30px">
+        <h2>Welcome back!</h2>
+        <h3>Personal Information</h3>
+
+
+    </div>
+        <ul>
+            <li>
+                Height = {{currentUser.height}} cm.
+
+            </li>
+            <li>
+                Weight = {{currentUser.weight}} kg.
+            </li>
+
+
+            <li>
+                Gender = {{currentUser.gender}}
+            </li>
+            <li>
+                Age = {{currentUser.age}}
+
+
+            </li>
+            <li>
+                Mail = {{currentUser.mail}}
+
+
+            </li>
+            <li>
+                Status = {{currentUser.Status}}
+
+               
+            </li>
+           </ul>
+      <br>
+           
+            <div class="form-group">
+                <a href="http://localhost:4000/auth/fitbit/callback" target="_blank" class="btn btn-primary">Connect fitbit</a>
+              
+
+            </div>
+
+
+
+
+            
+
+
+    </div>
+    <div class="col">
+
+    </div>
+
+</div>

@@ -1,0 +1,71 @@
+﻿<div class="col-md-6 offset-md-3" style="padding-top:100px">
+      <h2>Register</h2>
+      <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+             <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid}">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" name="username"  pattern="[a-zA-Z0-9 ]*" minlength="6" maxlength="12" [(ngModel)]="model.username" #username="ngModel" required />
+               <!-- <div *ngIf=" f.submitted && !username.errors.minlength   "  class="help-block">Username can’t be empty. </div>  -->
+              <div *ngIf="f.submitted && !username.valid "  class="help-block"> Username should contains alphabet  a-z,A-Z and number 0-9 with length between 6-12 characters. Any special characters aren’t allowed.</div> 
+          </div>
+          <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password" pattern="[a-zA-Z0-9 ]*" minlength="6" maxlength="12" [(ngModel)]="model.password" #password="ngModel" required />
+              <div *ngIf="f.submitted && !password.valid" class="help-block">Password should contains alphabet  a-z,A-Z and number 0-9 with length between 6-12 characters. Any special characters aren’t allowed.</div>
+              <!-- <div *ngIf=" f.submitted && !password.errors.minlength   "  class="help-block">Password can’t be empty. </div> -->
+          </div> 
+
+                   <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid}">
+              <label for="mail">mail</label>
+              <input type="text" class="form-control" name="mail"  [(ngModel)]="model.mail" #mail="ngModel" required />
+               <!-- <div *ngIf=" f.submitted && !username.errors.minlength   "  class="help-block">mail can’t be empty. </div>  -->
+                    
+          </div>
+                  <div  class="form-group" [ngClass]="{ 'has-error': f.submitted   }">
+        <label for="gender">Gender</label>
+        <div>
+            <select  class="form-control" name="gender"  [(ngModel)]="model.gender" #gender="ngModel" required >
+                <option *ngFor="let gender of gender1" [ngValue]="gender">{{gender}}</option>
+                  <div *ngIf="f.submitted && !gender.valid  " class="help-block"> gender can’t be empty</div>
+            </select>
+        </div>
+      </div>  
+       <div  class="form-group" [ngClass]="{ 'has-error': f.submitted   }">
+              <label for="age">Age</label>
+              <input type="number" class="form-control" name="age"  ng-minlength="1" ng-maxlength="5"  min="1" max="99" [(ngModel)]="model.age" #age="ngModel" required />
+              <div *ngIf="f.submitted && !age.valid  " class="help-block"> Age can’t be empty</div>
+          </div>
+          <!-- <md-input-container class="form-group" [ngClass]="{ 'has-error': f.submitted   }">
+            <label for="birthdate">choose a birthdate</label> 
+      <input class="form-control"  name="birthdate"  [(ngModel)]="model.birthdate" #birthdate="ngModel" mdInput [mdDatepicker]="picker" requred >
+     
+       <button mdSuffix [mdDatepickerToggle]="picker"></button> 
+      <md-datepicker #picker></md-datepicker>   
+       
+       </md-input-container>   -->
+           <div  class="form-group" [ngClass]="{ 'has-error': f.submitted   }">
+              <label for="weight">weight (Kg.)</label>
+              <input type="number" class="form-control" name="weight"  ng-minlength="1" ng-maxlength="5"  min="1" max="999" [(ngModel)]="model.weight" #weight="ngModel" required />
+              <div *ngIf="f.submitted && !weight.valid  " class="help-block"> Weight can’t be empty</div>
+          </div>
+           <div class="form-group" [ngClass]="{ 'has-error': f.submitted }">
+              <label for="height">height (Cm.)</label>
+              <input type="number" class="form-control" name="height" ng-minlength="1" ng-maxlength="5"  min="1" max="999" [(ngModel)]="model.height" #height="ngModel" required />
+              <div *ngIf="f.submitted && !height.valid " class="help-block"> Height can’t be empty</div>
+          </div>
+           <div class="form-group" [ngClass]="{ 'has-error': f.submitted }">
+              <label for="phoneNumber">PhoneNumber</label>
+              <input type="text" class="form-control" name="phoneNumber" minlength="10" maxlength="10" [(ngModel)]="model.phoneNumber" #phoneNumber="ngModel" required />
+              <div *ngIf="f.submitted && !phoneNumber.valid " class="help-block"> PhoneNumber can’t be empty</div>
+
+          </div>
+
+               
+             
+          <div class="form-group">
+              <button [disabled]="loading" class="btn btn-primary">Register</button>
+              <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+              <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
+          </div>
+      </form>
+      
+  </div>

@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "predict-disease-notification",
+    "private_key_id": "c1dd448a0371cb008dfd826802c76e8f30ac568b",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCWrzzhpVlAFR2j\n3vCEElRnrB8Q4D/PL88YIkn0cBLsPejc3S74AnOg/sctPIYwC2Qb6XCxxJmOYVqX\nyrhJ9c/CTmFklvnjs5UqZTM045cWQLI9LI3OR/4vmAuM/7C1+W2d6+ydej9e5MBc\nvsoouPgXmD43rN7QBMzMHODkyYIGpexYPAW6I/pESVGn6wV+LpgIeuwsbpU/BFdk\nSNdH7RncFwmUywvfidK7JAcvfRiao5kc0FBFcuHOA5G6AINw0ynlazQlI2HR+pzR\nwcsfPuwwwDeA5DroYiFCVcQTX3LlezUTRVX0lnJNWXBH7Rdp76Uqf/kasFM9n5jN\nK6N1n1n3AgMBAAECggEAEbMPwal8bEyOqLr9IWZNx8et9nuAw0NoXftZGH85mcpD\n2f2ZEMSo9FY46xVa5bXQ0n5/IEJpjxHcZEwJjZZ0CuzN/9TEEXz8nng4pZO+IX0D\n8q+TEJHgR5LieHNoPFfKCmy15GGBpBHWjo5SjKn9ajgVxtBlc6W8sJULzZPl1AXn\nLfUMKKKIkfuREr3V23UnThyult0SMuj6RpW2lp/xSfPYw+lhcBLzLAWG78oqLNnc\nSYQkL6JJwI5qsi7JlIh3u1sozUtaBjEWf+AAXepdUdzJG4rT4UDq8/ZXj8ClnHH1\nFtMd+/SJPDKnwJJmj49FeIBK0RkaZRS/VgKikGqpEQKBgQDKR8VsRq5b6fHJ0aB1\nAEEKrEjmLZQ3RN21tupZlwtq2ESjRutB73RekCU/w8cbzPBriXjPU+QtqMhnTGWT\nAsB1I7RqobOHjVRI2G37spAI/y+bhlY4ljZJvb4/BXLaOdQgJaLNU0b6QE0GEtL7\nASZmg1gMehrR2iIRGbAoTj5pOwKBgQC+s6xWFg4neyCOvnM/xXW9q+AxHBABhx1Y\n3MqqPe7sE0f3gVlCVymhsg4teJPNWPjo9QgqjbV/+Q/1ZixW8hhqzXTvrO8+UMjB\n82Qp8s+i3sFlXMsVzlIDHqd/h+XmYqNfZPLJCxydeN252LajwpTMy0d5HkrDoJNl\n9HbfasemdQKBgDRF59bbTSOjiUBGU9jof+ZqL0yMasj9mu3inx0X03OA//vRz+ny\nH3hwd6/KwCGHDHo9xGKPo1/JRkCrlXQwOdwLpgwITYSyGR3aEFIDCwXILF1ckdt9\ntfnIdumCVvPeDdtg3nmBE86H31+6bZs/6NSFDLPsuhGQ9UzF/qfr0GURAoGBAKxB\no8PG/FYRVCFcSsIp3ObNIB98F8EpiQrBtZb9hplb+T/KaRQRo5tZOJE+P1PXsE7N\nNukpQ+8qzI2AE0EeQYwHtj7g2OJTGmSHM8zodUHLMKocnZ0+1rnWsLnzyWjHZIdA\nqkWLcfeUO8QpyyA1HS+31wHCqQn4O+x2XAIHc/wZAoGBAJ+5MAS/vUg9guw+wd8/\n+4rz2R58efRhVuX1syV+pUZmKqiWCUHDZszAnd+xceAtaKCdr0Jy6l2cEPxE98TO\nJqsKNw9ySN94+y8i4aQ/u1fNGeUEr5cpuzqm4Ia7q9MPGdHUzV+5tBTbhM5QuXiC\nBHyyP7MvuTNwgWaK16QM9LwM\n-----END PRIVATE KEY-----\n",
+    "client_email": "predict-disease@predict-disease-notification.iam.gserviceaccount.com",
+    "client_id": "118095981161749281081",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://accounts.google.com/o/oauth2/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/predict-disease%40predict-disease-notification.iam.gserviceaccount.com"
+  }
+  
